@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark DevOps Theme - Light mode (for fallback) */
+    --background: 220 27% 8%;
+    --foreground: 180 100% 85%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 180 100% 85%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 180 100% 85%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 27% 8%;
+    --primary-glow: 180 100% 70%;
+
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 180 100% 85%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 190 100% 60%;
+    --accent-foreground: 220 27% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 220 91% 56%;
+
+    --radius: 0.75rem;
+    
+    /* Enhanced design tokens for DevOps theme */
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 50%), hsl(190 100% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 27% 8%), hsl(220 25% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 27% 8%) 0%, hsl(220 25% 12%) 50%, hsl(220 20% 15%) 100%);
+    --shadow-elegant: 0 10px 30px -10px hsl(180 100% 50% / 0.3);
+    --shadow-glow: 0 0 40px hsl(180 100% 70% / 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 220 25% 12%;
+    --sidebar-foreground: 180 100% 85%;
+    --sidebar-primary: 220 91% 56%;
+    --sidebar-primary-foreground: 220 27% 8%;
+    --sidebar-accent: 220 20% 20%;
+    --sidebar-accent-foreground: 180 100% 85%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 220 91% 56%;
+  }
+
+  .dark {
+    /* Dark DevOps Theme - Enhanced dark mode */
+    --background: 220 30% 6%;
+    --foreground: 180 100% 90%;
+
+    --card: 220 28% 10%;
+    --card-foreground: 180 100% 90%;
+
+    --popover: 220 28% 10%;
+    --popover-foreground: 180 100% 90%;
+
+    --primary: 180 100% 60%;
+    --primary-foreground: 220 30% 6%;
+    --primary-glow: 180 100% 75%;
+
+    --secondary: 220 25% 15%;
+    --secondary-foreground: 180 100% 90%;
+
+    --muted: 220 25% 12%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 190 100% 65%;
+    --accent-foreground: 220 30% 6%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 25% 18%;
+    --input: 220 25% 12%;
+    --ring: 220 91% 60%;
+
+    /* Enhanced design tokens for DevOps dark theme */
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 60%), hsl(190 100% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 30% 6%), hsl(220 28% 10%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 6%) 0%, hsl(220 28% 10%) 50%, hsl(220 25% 12%) 100%);
+    --shadow-elegant: 0 10px 30px -10px hsl(180 100% 60% / 0.4);
+    --shadow-glow: 0 0 50px hsl(180 100% 75% / 0.5);
+    --sidebar-background: 220 28% 10%;
+    --sidebar-foreground: 180 100% 90%;
+    --sidebar-primary: 220 91% 60%;
+    --sidebar-primary-foreground: 220 30% 6%;
+    --sidebar-accent: 220 25% 15%;
+    --sidebar-accent-foreground: 180 100% 90%;
+    --sidebar-border: 220 25% 18%;
+    --sidebar-ring: 220 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
